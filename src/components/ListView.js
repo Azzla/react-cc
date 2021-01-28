@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
 
-class ListView extends Component {
-  render() {
+function ListView(list) {
     return (
 			<div>
-			   <ul>
-          <li>#1</li>
-          <li>#2</li>
-          <li>#3</li>
-          <li>#4</li>
-         </ul>
+			{list.map(el => {
+				return <li key={Math.random(1, 10)}>{el}</li>;
+			})}
 			</div>
     )
-  }
 }
 
 
